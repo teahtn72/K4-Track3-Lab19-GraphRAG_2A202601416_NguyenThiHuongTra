@@ -1,0 +1,2 @@
+type,left,right,similarity,decision,guard_reason,probe_note
+Technology,H2O AI Cloud,H2O AI Cloud Platform,0.932456,REJECT_GUARD,PRODUCT_CONTAINMENT_CONFLICT,"Adversarial calibration probe derived from a corpus entity; validates that embedding similarity alone cannot merge a product with a broader platform name"

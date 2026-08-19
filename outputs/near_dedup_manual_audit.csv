@@ -1,0 +1,10 @@
+duplicate_article_id,canonical_article_id,jaccard_5gram,review_label,review_note
+20900bb77008b0464c81,e6090305820383267481,0.927273,TP,"Same AT&T 411 shutdown story; title shortened and body nearly identical"
+05a134c06ab008a9d52c,f88a9282762685bb8f9b,0.836364,TP,"Same FIS close-price story; duplicate is a truncated copy"
+e5ccd70f01654458127e,42f24c797073748f73f8,0.977273,TP,"Same Sensormatic Super Saturday release with punctuation/truncation differences"
+9cec56f34793ad5c585e,919a7d918c23097ae974,1.000000,TP,"Same 411 story; quote escaping differs"
+8c5930949a3d9f3c3a38,8e58296629f84469cd8d,0.869565,TP,"Same Samsung System LSI Tech Day release; shorter duplicate body"
+91f9239890e39e4693bd,f7f78028c8d9e7fb131e,0.950000,TP,"Same restaurant technology-partner article; title prefix removed"
+e1dd933ce175e571f1fc,99e4dff966ca14987a42,0.833333,TP,"Same Knicks-Pacers game recap; duplicate is truncated"
+c967562f9d4628db990c,c86b8357f117fa7f9444,0.864865,TP,"Same Wall Street/Big Tech market report; duplicate is truncated"
+e41e603c9b2b467c7a45,d2f10b6eb420a221b002,1.000000,TP,"Same CereCore UK expansion release; trademark/date formatting differs"

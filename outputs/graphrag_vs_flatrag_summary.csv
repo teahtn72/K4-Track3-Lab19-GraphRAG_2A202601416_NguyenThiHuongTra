@@ -1,0 +1,25 @@
+Loại câu hỏi,Metric,Flat RAG,GraphRAG,Nhận xét phân tích
+cross-doc,Comprehensiveness,3.4,3.4,Hai phương pháp gần nhau.
+cross-doc,Faithfulness,3.6,3.6,Hai phương pháp gần nhau.
+cross-doc,Multi-hop reasoning,3.4,3.4,Hai phương pháp gần nhau.
+cross-doc,Latency (s),1.72,7.693,Flat RAG thường rẻ/nhanh hơn.
+cross-doc,Token usage,579.8,496.6,GraphRAG không đắt hơn trong sample này.
+factoid,Comprehensiveness,4.8,5.0,Hai phương pháp gần nhau.
+factoid,Faithfulness,5.0,5.0,Hai phương pháp gần nhau.
+factoid,Multi-hop reasoning,4.8,5.0,Hai phương pháp gần nhau.
+factoid,Latency (s),1.322,3.837,Flat RAG thường rẻ/nhanh hơn.
+factoid,Token usage,540.2,453.8,GraphRAG không đắt hơn trong sample này.
+multi-hop,Comprehensiveness,3.0,3.0,Hai phương pháp gần nhau.
+multi-hop,Faithfulness,3.0,3.0,Hai phương pháp gần nhau.
+multi-hop,Multi-hop reasoning,3.0,3.0,Hai phương pháp gần nhau.
+multi-hop,Latency (s),2.805,5.25,Flat RAG thường rẻ/nhanh hơn.
+multi-hop,Token usage,682.0,672.0,GraphRAG không đắt hơn trong sample này.
+overall,Comprehensiveness,3.733,3.8,Hai phương pháp gần nhau.
+overall,Faithfulness,3.867,3.867,Hai phương pháp gần nhau.
+overall,Multi-hop reasoning,3.733,3.8,Hai phương pháp gần nhau.
+overall,Latency (s),1.949,5.593,Flat RAG thường rẻ/nhanh hơn.
+overall,Token usage,600.667,540.8,GraphRAG không đắt hơn trong sample này.
+cross-doc,Evidence recall@k,0.7,0.7,Recall trên evidence row IDs; IDs không được dùng khi retrieval.
+factoid,Evidence recall@k,1.0,1.0,Recall trên evidence row IDs; IDs không được dùng khi retrieval.
+multi-hop,Evidence recall@k,0.733,0.733,Recall trên evidence row IDs; IDs không được dùng khi retrieval.
+overall,Evidence recall@k,0.811,0.811,Recall trên evidence row IDs; IDs không được dùng khi retrieval.

@@ -1,0 +1,16 @@
+source_raw,source_type,relation,target_raw,target_type,source_chunk_id,published_date,evidence,confidence
+Aeris Communications,Company,PARTNERED_WITH,Ericsson,Company,row_00033::c0000,2022-12-07,Aeris Communications and Ericsson are joining together,0.95
+ServiceNow,Company,PARTNERED_WITH,NVIDIA,Company,row_00746::c0000,2023-05-17,ServiceNow and NVIDIA today announced a partnership,0.95
+Aeris,Company,ACQUIRED,Ericsson,Company,row_00935::c0000,2023-01-18,Aeris has acquired Ericsson's IoT Accelerator and Connected Vehicle Cloud businesses,0.95
+Ericsson,Company,ACQUIRED,Aeris,Company,row_01746::c0000,2023-01-10,Ericsson's IoT Accelerator and Connected Vehicle Cloud businesses and related assets to be transferred to Aeris.,0.95
+Google,Company,DEVELOPED,artificial intelligence,Technology,row_03380::c0000,2023-07-21,"Google, Meta, and OpenAI have voluntarily made commitments on developing and managing artificial intelligence",0.95
+Meta,Company,DEVELOPED,artificial intelligence,Technology,row_03380::c0000,2023-07-21,"Google, Meta, and OpenAI have voluntarily made commitments on developing and managing artificial intelligence",0.95
+OpenAI,Company,DEVELOPED,artificial intelligence,Technology,row_03380::c0000,2023-07-21,"Google, Meta, and OpenAI have voluntarily made commitments on developing and managing artificial intelligence",0.95
+Google Cloud,Company,USES,Llama 2,Technology,row_03395::c0000,2023-08-29,Google Cloud is announcing availability of Llama 2,0.95
+Google Cloud,Company,USES,Code Llama,Technology,row_03395::c0000,2023-08-29,Google Cloud is announcing availability of Llama 2 and Code Llama from Meta,0.95
+Google Cloud,Company,USES,Falcon LLM,Technology,row_03395::c0000,2023-08-29,Google Cloud is announcing availability of Llama 2 and Code Llama from Meta and Technology Innovative Institute's Falcon LLM,0.95
+Nvidia,Company,USES,chips,Technology,row_03432::c0000,2023-02-22,Nvidia's CEO said use of its chips to power artificial intelligence (AI) services,0.95
+H2O.ai,Company,DEVELOPED,H2O AI Cloud,Technology,row_03498::c0000,2023-04-13,H2O.ai today announced the launch of H2O AI Cloud,0.95
+Snowflake,Company,DEVELOPED,Manufacturing Data Cloud,Technology,row_03498::c0000,2023-04-13,Manufacturing Data Cloud launched by Snowflake,0.95
+Bill Chappell,Person,LEADS,Strategic Missions and Technologies,Company,row_03529::c0000,2023-06-09,Bill Chappell chief technology officer for Strategic Missions and Technologies,0.95
+the company,Company,USES,chip-stacking tech,Technology,row_03714::c0000,2023-09-19,The company plans to use the chip-stacking tech,0.75

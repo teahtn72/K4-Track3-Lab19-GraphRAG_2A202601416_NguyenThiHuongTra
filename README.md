@@ -65,7 +65,10 @@ NEO4J_PASSWORD=<your-password>
 NEO4J_DATABASE=neo4j
 
 GROQ_API_KEY=gsk_...
-GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MODEL=openai/gpt-oss-20b
+GROQ_FALLBACK_MODEL=openai/gpt-oss-20b
+PIPELINE_PROVIDER=groq               # đổi thành 'openai' nếu Groq rate-limit
+PIPELINE_MODEL=openai/gpt-oss-20b    # dùng gpt-4o-mini khi provider=openai
 
 JUDGE_PROVIDER=openai               # 'openai' hoặc 'groq'
 JUDGE_MODEL=gpt-4o-mini             # hoặc llama-3.3-70b-versatile
@@ -100,6 +103,17 @@ cp .env.example .env
 # 4. Khởi chạy Jupyter Lab / Notebook
 jupyter lab Day19_GraphRAG_vs_FlatRAG_Production_Lab_Guide.ipynb
 ```
+
+### Chạy integration benchmark tái lập
+
+Đặt `hackernoon_subset.csv` ở thư mục gốc (hoặc khai báo `LOCAL_DATA_PATH` trong `.env`), sau đó chạy:
+
+```bash
+python scripts/run_lab_test.py --corpus-size 100 --eval-size 15 --batch-size 5
+python -m pytest -q
+```
+
+Runner dùng trực tiếp các cell implementation trong notebook, checkpoint từng câu và xuất manifest/audit vào `outputs/`. Lần chạy ngày 19/08/2026 đạt 5/5 tests; graph cuối có 20 nodes, 13 edges và 0 vi phạm schema/provenance. Xem số liệu và giới hạn phép đo trong [`reports/lab_report.md`](reports/lab_report.md).
 
 ---
 
@@ -145,8 +159,11 @@ Day19-Track3-GraphRAG/
 │   ├── graphrag_eval_results.csv                         # Chi tiết kết quả từng câu hỏi + điểm Judge
 │   └── graphrag_vs_flatrag_summary.csv                   # Bảng so sánh tổng hợp Flat RAG vs GraphRAG
 │
-├── reports/                                              # 📁 Báo cáo hoàn chỉnh của học viên (Chỉ 1 file duy nhất)
-│   └── lab_report.md                                     # ★ Thuyết minh kỹ thuật (10 câu) + Phân tích lỗi + Reflection
+├── reports/                                              # 📁 Báo cáo và bằng chứng phân tích
+│   ├── lab_report.md                                     # ★ Báo cáo tổng hợp
+│   ├── technical_defense.md                              # 10 câu thuyết minh kỹ thuật
+│   ├── failure_analysis.md                               # Root-cause analysis
+│   └── reflection_NguyenThiHuongTra.md                   # Reflection + action plan
 │
 └── templates/                                            # 📁 Bản sao dự phòng gốc của mẫu báo cáo
     └── lab_report.md
@@ -159,4 +176,4 @@ Day19-Track3-GraphRAG/
 Học viên commit và push lên GitHub cá nhân:
 1. `Day19_GraphRAG_vs_FlatRAG_Production_Lab_Guide.ipynb` (Notebook đã chạy đầy đủ output các cell).
 2. `outputs/graphrag_eval_results.csv` và `outputs/graphrag_vs_flatrag_summary.csv`.
-3. `reports/lab_report.md` (Điền đầy đủ 2 phần: Thuyết minh kỹ thuật & Suy ngẫm cá nhân).
+3. `reports/lab_report.md` và ba báo cáo chi tiết trong `reports/`.

@@ -1,0 +1,85 @@
+{
+  "run_timestamp": "2026-08-19T17:34:08.502024+07:00",
+  "scope": {
+    "source_rows": 5000,
+    "controlled_corpus_rows": 100,
+    "gold_evidence_rows_included": 51,
+    "evaluation_questions": 15,
+    "selection_note": "Union of gold evidence rows + fixed random distractors; no per-query gold lookup during retrieval."
+  },
+  "models": {
+    "embedding": "sentence-transformers/all-MiniLM-L6-v2",
+    "pipeline_provider": "openai",
+    "generator_and_extractor": "gpt-4o-mini",
+    "judge_provider": "openai",
+    "judge_model": "gpt-4o-mini"
+  },
+  "preprocessing": {
+    "first5000_after_exact_dedup": 2105,
+    "first5000_after_near_dedup": 2096,
+    "first5000_near_duplicates_merged": 9,
+    "standardized_after_exact_dedup": 100,
+    "after_near_dedup": 100,
+    "near_duplicates_merged": 0,
+    "chunks": 100,
+    "coref_batch_failures": 0
+  },
+  "extraction": {
+    "accepted_raw_triples": 15,
+    "rejected_candidates": 19,
+    "failed_batches": 0,
+    "validated_triples": 15,
+    "entity_resolution_audit_rows": 43,
+    "preinsert_rejections": 0,
+    "validated_triples_after_failure_audit": 13,
+    "post_benchmark_guard_rejections": 2,
+    "post_benchmark_guard_note": "Generic unresolved entity and non-completed acquisition guards added after failure audit; benchmark metrics remain the measured pre-fix run."
+  },
+  "neo4j": {
+    "skipped": false,
+    "inserted_nodes": 22,
+    "edge_insert_stats": {
+      "accepted_edges": 15,
+      "rejected_edges": 0,
+      "matched_and_written": 15
+    },
+    "graph_checks": {
+      "nodes": 22,
+      "edges": 15,
+      "invalid_provenance_edges": 0,
+      "invalid_relation_types": 0,
+      "invalid_endpoint_types": 0,
+      "invalid_node_subtypes": 0,
+      "missing_or_duplicate_edge_ids": 0
+    }
+  },
+  "evaluation_overall": {
+    "flat_comprehensiveness": 3.7333333333333334,
+    "graph_comprehensiveness": 3.8,
+    "flat_faithfulness": 3.8666666666666667,
+    "graph_faithfulness": 3.8666666666666667,
+    "flat_multi_hop_reasoning": 3.7333333333333334,
+    "graph_multi_hop_reasoning": 3.8,
+    "flat_latency_s": 1.948935008199381,
+    "graph_latency_s": 5.593480800066512,
+    "flat_total_tokens": 600.6666666666666,
+    "graph_total_tokens": 540.8,
+    "flat_evidence_recall": 0.8111111111111111,
+    "graph_evidence_recall": 0.8111111111111111
+  },
+  "final_graph_counts": {
+    "nodes": 20,
+    "edges": 13,
+    "invalid_provenance_edges": 0,
+    "invalid_relation_types": 0,
+    "invalid_endpoint_types": 0,
+    "invalid_node_subtypes": 0,
+    "missing_or_duplicate_edge_ids": 0
+  },
+  "post_benchmark_cleanup": {
+    "removed_edges": 2,
+    "removed_orphan_nodes": 2,
+    "reason": "modality and generic-entity guards added after benchmark audit",
+    "metrics_note": "Evaluation CSVs are the measured pre-cleanup benchmark snapshot."
+  }
+}
